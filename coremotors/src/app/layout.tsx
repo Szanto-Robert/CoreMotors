@@ -2,12 +2,28 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollManager from "@/components/ScrollManager"; // 👈 ezt importáljuk külön
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "CoreMotors | Innováció az Elektromobilitásban",
-  description: "Uniós támogatással megvalósuló fejlesztési projekt bemutatása.",
+  title: "CoreMotors | Servicii auto profesionale în mediul rural",
+  description:
+    "Atelier auto finanțat prin FEADR – CoreMotors oferă servicii profesionale de reparații și întreținere auto în mediul rural din județul Alba.",
+  keywords:
+    "atelier auto, reparații auto, service auto, FEADR, CoreMotors, întreținere mașini, mecanic auto",
+  viewport: "width=device-width, initial-scale=1.0",
+  authors: [{ name: "CoreMotors" }],
+  openGraph: {
+    title: "CoreMotors | Atelier auto modern",
+    description:
+      "Proiect finanțat prin Fondul European Agricol pentru Dezvoltare Rurală (FEADR). Atelier auto profesional în Rădești, Alba.",
+    url: "https://coremotors.ro",
+    siteName: "CoreMotors",
+    images: ["/coremotors-logo.png"],
+    locale: "ro_RO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -16,8 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="hu">
+    <html lang="ro" suppressHydrationWarning>
       <body className={`${inter.className} bg-gray-50 text-gray-900`}>
+        <ScrollManager /> {/* 👈 Külön komponensként hívjuk meg */}
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
