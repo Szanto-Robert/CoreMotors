@@ -22,31 +22,34 @@ export default function Header() {
 
   // multilingual labels for each menu item
   const labels = {
-    hu: {
-      home: "Főoldal",
-      about: "Rólunk",
-      services: "Szolgáltatások",
-      gallery: "Galéria",
-      prices: "Árak",
-      contact: "Kapcsolat",
-    },
-    ro: {
-      home: "Acasă",
-      about: "Despre noi",
-      services: "Servicii",
-      gallery: "Galerie",
-      prices: "Prețuri",
-      contact: "Contact",
-    },
-    en: {
-      home: "Home",
-      about: "About",
-      services: "Services",
-      gallery: "Gallery",
-      prices: "Prices",
-      contact: "Contact",
-    },
-  };
+  hu: {
+    home: "Főoldal",
+    about: "Rólunk",
+    services: "Szolgáltatások",
+    gallery: "Galéria",
+    prices: "Árak",
+    appointment: "Időpontfoglalás",
+    contact: "Kapcsolat",
+  },
+  ro: {
+    home: "Acasă",
+    about: "Despre noi",
+    services: "Servicii",
+    gallery: "Galerie",
+    prices: "Prețuri",
+    appointment: "Programare",
+    contact: "Contact",
+  },
+  en: {
+    home: "Home",
+    about: "About",
+    services: "Services",
+    gallery: "Gallery",
+    prices: "Prices",
+    appointment: "Appointment",
+    contact: "Contact",
+  },
+};
 
   const t = labels[lang];
 
@@ -76,6 +79,7 @@ export default function Header() {
           <Link href={localizedPath("/gallery")}>{t.gallery}</Link>
           <Link href={localizedPath("/prices")}>{t.prices}</Link>
           <Link href={localizedPath("/contact")}>{t.contact}</Link>
+          <Link href={localizedPath("/appointment")}>{t.appointment}</Link>
         </div>
 
         {/* MOBILE ICON */}
