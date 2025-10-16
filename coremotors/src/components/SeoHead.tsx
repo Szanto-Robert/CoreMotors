@@ -1,0 +1,16 @@
+import { NextSeo } from "next-seo";
+
+export default function SeoHead() {
+  return (
+    <NextSeo
+      title="CoreMotors | Uniós Fejlesztés"
+      description="A CoreMotors Kft. uniós támogatással megvalósuló elektromobilitási projektje."
+      openGraph={{
+        type: "website",
+        locale: "hu_HU",
+        url: "https://coremotors.hu/",
+        site_name: "CoreMotors",
+      }}
+    />
+  );
+}
