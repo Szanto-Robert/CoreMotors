@@ -31,8 +31,8 @@ export default function ContactPage() {
               <p className="font-semibold text-yellow-400 flex items-center gap-2">
                 📞 Telefon
               </p>
-              <p>+40 745 123 456</p>
-              <p>+40 770 400 104 (WhatsApp)</p>
+              <p>+40 752 160 800</p>
+              <p>+40 752 160 800 (WhatsApp)</p>
             </div>
 
             <div>

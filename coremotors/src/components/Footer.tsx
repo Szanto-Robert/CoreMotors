@@ -72,9 +72,9 @@
               {pathname.startsWith("/ro") && "Str. Principală nr. 219, Lopadea Nouă, jud. Alba"}
               {pathname.startsWith("/en") && "219 Main Street, Lopadea Nouă, Alba County"}
             </li>
-            <li>📞 +40 745 123 456</li>
-            <li>📱 +40 770 400 104 (WhatsApp)</li>
-            <li>✉️ contact@coremotors.ro</li>
+            <li>📞 +40 752 160 800</li>
+            <li>📱 +40 752 160 800 (WhatsApp)</li>
+            <li>✉️ coremotors.service@gmail.com</li>
           </ul>
         </div>
 
