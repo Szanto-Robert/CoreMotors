@@ -26,7 +26,7 @@ export default function Header() {
     home: "Főoldal",
     about: "Rólunk",
     services: "Szolgáltatások",
-    gallery: "Galéria",
+    //gallery: "Galéria",
     prices: "Árak",
     appointment: "Időpontfoglalás",
     contact: "Kapcsolat",
@@ -35,7 +35,7 @@ export default function Header() {
     home: "Acasă",
     about: "Despre noi",
     services: "Servicii",
-    gallery: "Galerie",
+    //gallery: "Galerie",
     prices: "Prețuri",
     appointment: "Programare",
     contact: "Contact",
@@ -44,7 +44,7 @@ export default function Header() {
     home: "Home",
     about: "About",
     services: "Services",
-    gallery: "Gallery",
+    //gallery: "Gallery",
     prices: "Prices",
     appointment: "Appointment",
     contact: "Contact",
@@ -76,7 +76,6 @@ export default function Header() {
           <Link href={localizedPath("")}>{t.home}</Link>
           <Link href={localizedPath("/about")}>{t.about}</Link>
           <Link href={localizedPath("/services")}>{t.services}</Link>
-          <Link href={localizedPath("/gallery")}>{t.gallery}</Link>
           <Link href={localizedPath("/prices")}>{t.prices}</Link>
           <Link href={localizedPath("/contact")}>{t.contact}</Link>
           <Link href={localizedPath("/appointment")}>{t.appointment}</Link>
@@ -105,14 +104,14 @@ export default function Header() {
             <Link href={localizedPath("/services")} onClick={() => setMenuOpen(false)}>
               {t.services}
             </Link>
-            <Link href={localizedPath("/gallery")} onClick={() => setMenuOpen(false)}>
-              {t.gallery}
-            </Link>
             <Link href={localizedPath("/prices")} onClick={() => setMenuOpen(false)}>
               {t.prices}
             </Link>
             <Link href={localizedPath("/contact")} onClick={() => setMenuOpen(false)}>
               {t.contact}
+            </Link>
+            <Link href={localizedPath("/appointment")} onClick={() => setMenuOpen(false)}>
+              {t.appointment}
             </Link>
           </div>
         </div>

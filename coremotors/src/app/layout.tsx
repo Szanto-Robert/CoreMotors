@@ -33,10 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ro" suppressHydrationWarning>
-      <body className={`${inter.className} bg-gray-50 text-gray-900`}>
+      <body className={`${inter.className} bg-transparent text-gray-900`}>
         <ScrollManager /> {/* 👈 Külön komponensként hívjuk meg */}
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-0">{children}</main>
         <Footer />
       </body>
     </html>

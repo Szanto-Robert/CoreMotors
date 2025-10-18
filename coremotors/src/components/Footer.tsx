@@ -45,19 +45,25 @@
           </div>
 
           {/* 2️⃣ CONTACT */}
-          <div>
-            <h4 className="text-white font-semibold mb-3 tracking-wide">
-              {pathname.startsWith("/hu") && "KAPCSOLAT"}
-              {pathname.startsWith("/ro") && "CONTACT"}
-              {pathname.startsWith("/en") && "CONTACT"}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>📍 Str. Principală nr. 10, Rădești, jud. Alba</li>
-              <li>📞 +40 745 123 456</li>
-              <li>📱 +40 770 400 104 (WhatsApp)</li>
-              <li>✉️ contact@coremotors.ro</li>
-            </ul>
-          </div>
+        <div>
+          <h4 className="text-white font-semibold mb-3 tracking-wide">
+            {pathname.startsWith("/hu") && "KAPCSOLAT"}
+            {pathname.startsWith("/ro") && "CONTACT"}
+            {pathname.startsWith("/en") && "CONTACT"}
+          </h4>
+          <ul className="space-y-2 text-sm">
+            <li>
+              📍{" "}
+              {pathname.startsWith("/hu") && "Fő utca 219., Lopadea Nouă, Alba megye"}
+              {pathname.startsWith("/ro") && "Str. Principală nr. 219, Lopadea Nouă, jud. Alba"}
+              {pathname.startsWith("/en") && "219 Main Street, Lopadea Nouă, Alba County"}
+            </li>
+            <li>📞 +40 745 123 456</li>
+            <li>📱 +40 770 400 104 (WhatsApp)</li>
+            <li>✉️ contact@coremotors.ro</li>
+          </ul>
+        </div>
+
 
           {/* 3️⃣ PROGRAM */}
           <div>
@@ -106,7 +112,10 @@
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy" className="hover:text-blue-400 transition-colors">
+                <Link
+                  href={`/${pathname.split("/")[1]}/privacy`}
+                  className="hover:text-blue-400 transition-colors"
+                >
                   {pathname.startsWith("/hu") && "Adatvédelmi nyilatkozat"}
                   {pathname.startsWith("/ro") && "Politica de Confidențialitate"}
                   {pathname.startsWith("/en") && "Privacy Policy"}

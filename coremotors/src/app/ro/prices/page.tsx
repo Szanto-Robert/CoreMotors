@@ -8,14 +8,14 @@ type PriceTableProps = {
 };
 
 const PriceTable: React.FC<PriceTableProps> = ({ title, columns, items }) => (
-  <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-gray-200 p-6 mb-10 transition hover:shadow-xl">
-    <h2 className="text-2xl font-bold text-center mb-6 text-red-600 border-b pb-2">
+  <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 p-6 mb-10 transition hover:shadow-xl text-white">
+    <h2 className="text-2xl font-bold text-center mb-6 text-yellow-400 border-b border-yellow-400 pb-2">
       {title}
     </h2>
     <div className="overflow-x-auto">
-      <table className="w-full text-sm md:text-base text-gray-800">
+      <table className="w-full text-sm md:text-base text-gray-100">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-white/10 text-yellow-300">
             {columns.map((col: string, i: number) => (
               <th key={i} className="px-4 py-2 text-left font-semibold">
                 {col}
@@ -27,7 +27,9 @@ const PriceTable: React.FC<PriceTableProps> = ({ title, columns, items }) => (
           {items.map((row: string[], i: number) => (
             <tr
               key={i}
-              className={`border-t ${i % 2 === 0 ? "bg-white" : "bg-gray-50"} hover:bg-gray-100 transition`}
+              className={`border-t border-white/10 ${
+                i % 2 === 0 ? "bg-white/5" : "bg-white/0"
+              } hover:bg-white/10 transition`}
             >
               {row.map((cell: string, j: number) => (
                 <td key={j} className="px-4 py-2">
@@ -44,10 +46,17 @@ const PriceTable: React.FC<PriceTableProps> = ({ title, columns, items }) => (
 
 const PricesRO: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-4xl font-bold text-center text-[#ff4d4d] mb-10 border-b-4 border-[#ff4d4d] inline-block pb-2">
-        Prețuri Servicii
-      </h1>
+    <section
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-fixed text-white"
+      style={{ backgroundImage: "url('/prices-bg.png')" }} // <-- ide a háttérkép
+    >
+      {/* sötét overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-center text-yellow-400 mb-10 border-b-4 border-yellow-400 inline-block pb-2">
+          Prețuri Servicii
+        </h1>
 
       {/* Constatare & Servicii Generale */}
       <PriceTable
@@ -174,10 +183,11 @@ const PricesRO: React.FC = () => {
         ]}
       />
 
-      <p className="text-center text-gray-500 text-sm mt-8">
-        *Prețurile pot varia în funcție de modelul și starea vehiculului.
-      </p>
-    </div>
+      <p className="text-center text-yellow-400 text-sm mt-8">
+          *Prețurile pot varia în funcție de modelul și starea vehiculului.
+        </p>
+      </div>
+    </section>
   );
 };
 
