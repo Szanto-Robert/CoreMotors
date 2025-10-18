@@ -1,59 +1,52 @@
+"use client";
+
 import Image from "next/image";
 
-export default function ContactPage() {
+export default function ContactHU() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16">
-      <div className="relative w-screen h-[320px] md:h-[420px] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-12 overflow-hidden">
-        <Image
-          src="/contact-bg.png"
-          alt="Kapcsolat háttér"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-          <h1 className="text-5xl font-extrabold text-white drop-shadow-lg tracking-wider">
-            KAPCSOLAT
-          </h1>
-        </div>
-      </div>
+    <section
+      className="relative min-h-screen flex flex-col justify-center items-center text-white bg-cover bg-center bg-fixed bg-no-repeat"
+      style={{ backgroundImage: "url('/contact-bg.png')" }}
+    >
+      {/* Áttetsző fekete réteg */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="grid md:grid-cols-2 gap-10 items-start">
+      {/* Tartalom */}
+      <div className="relative z-10 max-w-6xl w-full mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        {/* Bal oldali szöveg */}
         <div>
-          <h2 className="text-2xl font-semibold text-blue-800 mb-6">
-            Lépjen kapcsolatba velünk
-          </h2>
+          <h1 className="text-4xl font-extrabold text-yellow-400 mb-8 drop-shadow-lg">
+            LÉPJ KAPCSOLATBA VELÜNK
+          </h1>
 
-          <div className="space-y-6 text-gray-800">
+          <div className="space-y-6 text-gray-100">
             <div>
-              <p className="font-semibold text-gray-900 flex items-center gap-2">
+              <p className="font-semibold text-yellow-400 flex items-center gap-2">
                 📍 Cím
               </p>
-              <p>Str. Tholdalagi Mihaly 23, Corunca, Mureș megye</p>
+              <p>Fő utca 219., Lopadea Nouă, Alba megye, Románia</p>
             </div>
 
             <div>
-              <p className="font-semibold text-gray-900 flex items-center gap-2">
-                📞 Telefon
+              <p className="font-semibold text-yellow-400 flex items-center gap-2">
+                📞 Telefonszám
               </p>
-              <p>0742 333 300</p>
-              <p>0770 400 104 (Whatsapp)</p>
-              <p>0365 882 882</p>
+              <p>+40 745 123 456</p>
+              <p>+40 770 400 104 (WhatsApp)</p>
             </div>
 
             <div>
-              <p className="font-semibold text-gray-900 flex items-center gap-2">
+              <p className="font-semibold text-yellow-400 flex items-center gap-2">
                 🕒 Nyitvatartás
               </p>
               <p>Hétfő – Péntek: 08:30 – 17:00</p>
               <p>Szombat – Vasárnap: Zárva</p>
             </div>
-
-            <hr className="my-6 border-gray-300" />
           </div>
         </div>
 
-        <div className="rounded-xl overflow-hidden shadow-lg">
+        {/* Jobb oldali térkép */}
+        <div className="rounded-xl overflow-hidden shadow-2xl border border-white/20">
           <iframe
             src="https://www.google.com/maps?q=46.2918676,23.8168545&z=18&output=embed"
             width="100%"
