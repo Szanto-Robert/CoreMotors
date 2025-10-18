@@ -21,7 +21,7 @@ const AboutHU = () => {
         <p className="text-lg md:text-xl leading-relaxed text-gray-100">
           A <span className="font-semibold">CoreMotors</span> egy{" "}
           <span className="font-semibold">családi vállalkozás</span>, amely már{" "}
-          <span className="font-semibold">közel 10 éve</span> működik az
+          <span className="font-semibold">közel 25 éve</span> működik az
           autószerelés területén. Kis, de elkötelezett csapatunk
           <span className="text-red-400 font-medium">
             {" "}megbízható, gyors és minőségi{" "}

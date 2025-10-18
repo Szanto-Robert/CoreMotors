@@ -20,7 +20,7 @@ const About = () => {
 
         <p className="text-lg md:text-xl leading-relaxed text-gray-100">
           CoreMotors este o <span className="font-semibold">afacere de familie </span> 
-          care activează de aproape <span className="font-semibold">10 ani</span> în domeniul 
+          care activează de aproape <span className="font-semibold">25 ani</span> în domeniul 
           reparațiilor auto. Suntem o echipă mică, dar pasionată, dedicată oferirii de servicii 
           <span className="text-red-400 font-medium"> corecte, rapide și de calitate </span> 
           pentru fiecare client care ne trece pragul.

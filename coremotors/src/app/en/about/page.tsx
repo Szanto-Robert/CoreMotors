@@ -21,7 +21,7 @@ const AboutEN = () => {
         <p className="text-lg md:text-xl leading-relaxed text-gray-100">
           <span className="font-semibold">CoreMotors</span> is a{" "}
           <span className="font-semibold">family-owned business</span> operating
-          for nearly <span className="font-semibold">10 years</span> in the
+          for nearly <span className="font-semibold">25 years</span> in the
           automotive repair industry. We are a small but passionate team,
           dedicated to providing{" "}
           <span className="text-red-400 font-medium">
