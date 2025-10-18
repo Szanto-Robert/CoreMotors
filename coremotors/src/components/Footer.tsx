@@ -4,11 +4,25 @@
   import Link from "next/link";
   import { usePathname, useRouter } from "next/navigation";
   import LanguageSwitcher from "@/components/LanguageSwitcher";
+  import { useEffect, useState } from "react";
 
 
   export default function Footer() {
     const pathname = usePathname();
     const router = useRouter();
+    const [lang, setLang] = useState<string | null>(null);
+
+    useEffect(() => {
+    if (pathname) {
+      const langSegment = pathname.split("/")[1] || "ro";
+      setLang(langSegment);
+    }
+  }, [pathname]);
+
+  if (!lang) {
+    // Amíg nincs biztos adat, ne renderelj dinamikus linket (elkerüli a hydration mismatch-et)
+    return null;
+  }
 
     // Egyszerű nyelvváltás – /hu, /ro, /en útvonalakra
     const changeLanguage = (lang: string) => {
