@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "CoreMotors | Servicii auto profesionale în mediul rural",
   description:
-    "Atelier auto finanțat prin FEADR – CoreMotors oferă servicii profesionale de reparații și întreținere auto în mediul rural din județul Alba.",
+    "CoreMotors oferă servicii profesionale de reparații și întreținere auto în mediul rural din județul Alba.",
   keywords:
     "atelier auto, reparații auto, service auto, FEADR, CoreMotors, întreținere mașini, mecanic auto",
   viewport: "width=device-width, initial-scale=1.0",
@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     title: "CoreMotors | Atelier auto modern",
     description:
-      "Proiect finanțat prin Fondul European Agricol pentru Dezvoltare Rurală (FEADR). Atelier auto profesional în Rădești, Alba.",
+      "Atelier auto profesional în Lopadea Noua, Alba.",
     url: "https://coremotors.ro",
     siteName: "CoreMotors",
     images: ["/coremotors-logo.png"],
