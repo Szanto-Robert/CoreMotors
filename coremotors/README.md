@@ -29,8 +29,26 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Build for Production
+
+This project is configured for static export to enable deployment on static hosting services like Hostinger:
+
+```bash
+npm run build
+```
+
+This will generate a static site in the `out/` directory.
+
+## Deploy on Static Hosting (Hostinger)
+
+1. Build the project: `npm run build`
+2. Upload the contents of the `out/` directory to your hosting provider
+3. Configure your web server to serve the static files
+
+**Important:** The project uses `output: 'export'` and `images.unoptimized: true` in `next.config.ts` to ensure all images work correctly on static hosting platforms.
+
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Alternatively, you can deploy on the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
