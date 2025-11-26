@@ -10,19 +10,16 @@
   export default function Footer() {
     const pathname = usePathname();
     const router = useRouter();
-    const [lang, setLang] = useState<string | null>(null);
+    const [lang, setLang] = useState<string>("ro");
 
     useEffect(() => {
     if (pathname) {
-      const langSegment = pathname.split("/")[1] || "ro";
-      setLang(langSegment);
+      const langSegment = pathname.split("/")[1];
+      if (langSegment === "hu" || langSegment === "ro" || langSegment === "en") {
+        setLang(langSegment);
+      }
     }
   }, [pathname]);
-
-  if (!lang) {
-    // Amíg nincs biztos adat, ne renderelj dinamikus linket (elkerüli a hydration mismatch-et)
-    return null;
-  }
 
     // Egyszerű nyelvváltás – /hu, /ro, /en útvonalakra
     const changeLanguage = (lang: string) => {
@@ -40,7 +37,7 @@
           {/* 1️⃣ LOGÓ + LEÍRÁS */}
           <div>
             <div className="flex items-center mb-4">
-              <Image
+              <img
                 src="/coremotors-logo.png"
                 alt="CoreMotors logo"
                 width={130}
@@ -127,7 +124,7 @@
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href={`/${pathname.split("/")[1]}/privacy`}
+                  href={`/${lang}/privacy`}
                   className="hover:text-blue-400 transition-colors"
                 >
                   {pathname.startsWith("/hu") && "Adatvédelmi nyilatkozat"}
@@ -136,22 +133,22 @@
                 </Link>
               </li>
               <li>
-                <Link href="https://anpc.ro/" target="_blank" className="hover:text-blue-400 transition-colors">
+                <a href="https://anpc.ro/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
                   ANPC
-                </Link>
+                </a>
               </li>
             </ul>
 
             {/* ANPC IMAGES */}
             <div className="flex gap-3 mt-4">
-              <Image
+              <img
                 src="/anpc-sal.png"
                 alt="ANPC SAL"
                 width={120}
                 height={40}
                 className="object-contain"
               />
-              <Image
+              <img
                 src="/anpc-insolventa.png"
                 alt="ANPC Insolvență"
                 width={120}

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const AboutHU = () => {
   return (
@@ -42,12 +43,12 @@ const AboutHU = () => {
 
         {/* Gomb a szolgáltatások oldalra */}
         <div className="mt-10">
-          <a
+          <Link
             href="/hu/services"
             className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Tekintsd meg szolgáltatásainkat
-          </a>
+          </Link>
         </div>
       </div>
     </div>

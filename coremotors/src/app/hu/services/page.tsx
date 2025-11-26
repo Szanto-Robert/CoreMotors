@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function ServicesHU() {
   const services = [
@@ -73,12 +74,12 @@ export default function ServicesHU() {
 
         {/* Gomb alul */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/hu/appointment"
             className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-8 rounded-full shadow-md transition-all duration-300"
           >
             Foglalj időpontot
-          </a>
+          </Link>
         </div>
       </div>
     </section>
