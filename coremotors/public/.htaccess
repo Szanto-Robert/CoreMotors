@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Remove trailing slash from .html files if they exist
+  RewriteRule ^(.+)\.html/$ /$1.html [L,R=301]
+  
+  # Redirect specific .html files to directories
+  RewriteRule ^ro\.html$ /ro/ [L,R=301]
+  RewriteRule ^en\.html$ /en/ [L,R=301]
+  RewriteRule ^hu\.html$ /hu/ [L,R=301]
+  
+  # Redirect root to /ro/
+  RewriteRule ^$ /ro/ [L,R=301]
+  RewriteRule ^index\.html$ /ro/ [L,R=301]
+  
+  # Add trailing slash to directories (not files)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ $1/ [L,R=301]
+  
+  # Serve index.html for directories
+  DirectoryIndex index.html
+</IfModule>
